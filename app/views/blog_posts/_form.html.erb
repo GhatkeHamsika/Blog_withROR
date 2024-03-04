@@ -3,7 +3,7 @@
 <% if form.object.errors.any? %>
   <div>
     <% form.object.errors.full_messages.each do |message| %>
-      <div><%= message%></div>
+      <div><%= message %></div>
     <% end %>
   </div>
 <% end %>
@@ -16,6 +16,11 @@
   <div>
     <%= form.label :body %>
     <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at, include_blank: true %>
   </div>
 
   <%= form.button%>
