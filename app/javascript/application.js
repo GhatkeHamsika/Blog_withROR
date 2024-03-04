@@ -2,11 +2,10 @@
 
 import "@hotwired/turbo-rails"
 import "./controllers"
-// import * as bootstrap from "bootstrap"
-
-//= require jquery3
-//= require popper
-//= require bootstrap
 import "popper"
 
-import "bootstrap"        
+import "bootstrap"       
+import * as bootstrap from "bootstrap"
+import "trix"
+import "@rails/actiontext"
+import 'stylesheets/application.scss';
