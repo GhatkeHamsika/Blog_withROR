@@ -12,7 +12,7 @@ class BlogPost < ApplicationRecord
   end
 
   def published?
-    published_at? && published_at > Time.current
+    published_at? && published_at <= Time.current
   end
   
   def scheduled?
