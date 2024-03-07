@@ -5,7 +5,7 @@ import "./controllers"
 import "popper"
 
 import "bootstrap"       
-import * as bootstrap from "bootstrap"
+
 import "trix"
 import "@rails/actiontext"
 import 'stylesheets/application.scss';

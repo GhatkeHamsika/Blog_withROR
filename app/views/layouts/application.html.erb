@@ -6,15 +6,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application" %>
+    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
     <%#= javascript_include_tag 'tinymce_config' %>
     <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_importmap_tags %>
+    <%= javascript_importmap_tags %>
     <%#= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-    <%#= javascript_pack_tag 'application' %>
+    <%#= javascript_pack_tag 'application',"data-turbolinks-track": "reload" %>
 
   </head>
 

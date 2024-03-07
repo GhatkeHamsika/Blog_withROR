@@ -4,6 +4,7 @@ class BlogPostsController < ApplicationController
     
     def index
     @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
+    @pagy, @blog_posts = pagy(@blog_posts)
   end
 
   def show
@@ -39,8 +40,8 @@ class BlogPostsController < ApplicationController
     redirect_to root_path
   end
 
-  private
-
+  private #helper method
+  
   def blog_post_params
     params.require(:blog_post).permit(:title, :content, :published_at)
   end

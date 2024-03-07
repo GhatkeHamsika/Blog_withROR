@@ -1,3 +1,7 @@
  @import 'bootstrap';         
 // @import 'bootstrap-icons/font/bootstrap-icons';
-@import "trix/dist/trix.css"
+@import "trix/dist/trix.css";
+//= require trix
+@import 'trix';
+@import "components/actiontext";
+@import "./actiontext.scss";
