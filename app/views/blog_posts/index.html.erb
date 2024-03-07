@@ -15,6 +15,8 @@
   </table>
 <% end %>
 
-<div class="my-16">
-  <%== pagy_bootstrap_nav(@pagy)%>
-</div>
+<%if @pagy.count > @pagy.items%>
+  <div class="my-16">
+    <%== pagy_bootstrap_nav(@pagy)%>
+  </div>
+  <%end%>
