@@ -15,3 +15,12 @@ user.update!(
   blog_post = BlogPost.where(title: "Blog Post #{i}").first_or_initialize
   blog_post.update(content: "Test #{i}", published_at: Time.current)
 end
+
+user = User.find_by(email: 'hamsikarghatke@gmail.com')
+
+if user
+  user.update(role: 'admin')
+  puts "User #{user.email} has been updated to admin."
+else
+  puts "User with email 'xxx@gmail.com' not found."
+end
