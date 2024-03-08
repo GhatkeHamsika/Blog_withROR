@@ -2,10 +2,10 @@
 
 import "@hotwired/turbo-rails"
 import "./controllers"
-import "popper"
+// import "popper"
 
-import "bootstrap"       
+// #import "bootstrap"       
 
 import "trix"
 import "@rails/actiontext"
-import 'stylesheets/application.scss';
+import "trix/dist/trix.css"
