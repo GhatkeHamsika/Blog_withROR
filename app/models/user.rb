@@ -9,11 +9,11 @@ class User < ApplicationRecord
 
 
   def admin?
-    role = 'admin'
+    role == 'admin'
   end
  
   def user?
-    role = 'user'
+    role == 'user'
   end
 
 end

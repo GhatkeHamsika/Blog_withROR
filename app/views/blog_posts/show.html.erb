@@ -1,5 +1,12 @@
-<%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
-
-<%= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
+<%#= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
+<% if user_signed_in? %>
+<%= link_to "Edit", edit_blog_post_path(@blog_post), class: "btn btn-secondary"%>
+ <% end %>
+<br>
+<br>
+<%#= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
+ <% if @blog_post.cover_image.present? %>
+  <%= image_tag @blog_post.cover_image,  style: "width:300px; height:200px" %>
+  <% end %>
 <h1><%= @blog_post.title %></h1>
 <%= @blog_post.content %>

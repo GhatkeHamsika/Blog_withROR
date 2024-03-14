@@ -1,0 +1,18 @@
+
+.masthead {
+      background-image: url('home-bg.jpg');
+      width: 100%;
+      height: 300px;
+      background-color: black;
+      /* Add any additional styles for the header background here */
+    }
+    
+    /* {
+        border: 1px solid rgb(220, 213, 213) !important;
+    } */
+    
+    .masthead {
+        background-image: url('home-bg.jpg')
+        /* Add any additional styles for the header background here */
+      }
+    

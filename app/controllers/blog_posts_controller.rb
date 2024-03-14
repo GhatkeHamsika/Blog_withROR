@@ -18,6 +18,7 @@ class BlogPostsController < ApplicationController
 
   def create
     @blog_post = BlogPost.new(blog_post_params)
+
     if @blog_post.save
       redirect_to @blog_post
     else
@@ -25,11 +26,14 @@ class BlogPostsController < ApplicationController
     end
   end
 
+
   def edit
+    authorize_admin!
     @blog_post = BlogPost.find(params[:id])
   end
   
   def update
+    authorize_admin!
     if @blog_post.update(blog_post_params)
       redirect_to @blog_post
     else
@@ -38,6 +42,7 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
+    authorize_admin!
     @blog_post.destroy
     redirect_to root_path
   end
@@ -56,5 +61,13 @@ class BlogPostsController < ApplicationController
     @blog_post = user_signed_in? ? BlogPost.find(params[:id]) : BlogPost.published.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       redirect_to root_path
+  end
+
+  # def authorize_user!
+  #   redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user.user?
+  # end
+
+  def authorize_admin!
+    redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user.admin?
   end
 end

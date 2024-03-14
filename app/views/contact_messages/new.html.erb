@@ -1,0 +1,22 @@
+<h3>Contact Me</h3>
+<%= form_with(model: @contact_message, url: contact_messages_path) do |form| %>
+   <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"><%= form.label :name%></label>
+  <%= form.text_field :name, class: "form-control", id: "exampleFormControlTextarea1", rows: 3 %>
+  </div>
+  <br>
+
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"><%= form.label :email %></label>
+  <%= form.email_field :email,class: "form-control", id: "exampleFormControlTextarea1", rows: 3 %>
+  </div>
+  <br>
+
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"><%= form.label :message %></label>
+  <%= form.text_area :message, class: "form-control", id: "exampleFormControlTextarea1", rows: 3 %>
+</div>
+<br>
+
+<%= form.submit "Submit" , class: "btn btn-primary"%>
+<% end %>
