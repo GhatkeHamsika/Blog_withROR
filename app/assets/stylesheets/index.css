@@ -1,0 +1,29 @@
+/* app/assets/stylesheets/index.css */
+
+/* Style for blog post content */
+.blog-post-content {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #d7c7d8;
+    text-align: center;
+  }
+  
+  /* Style for draft status */
+  .draft-status {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #e1d0dc; /* Bootstrap warning color */
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Style for scheduled status */
+  .scheduled-status {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #ccb3c5; /* Bootstrap info color */
+    color: #fff;
+    font-weight: bold;
+  }

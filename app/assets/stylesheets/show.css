@@ -1,0 +1,26 @@
+/* app/assets/stylesheets/show.css */
+
+/* Style for the edit button */
+.edit-button {
+    margin-bottom: 20px;
+}
+
+/* Style for the blog post cover image */
+.blog-post-cover-image {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 200px;
+}
+
+/* Style for the blog post title */
+.blog-post-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style for the blog post content */
+.blog-post-content {
+    font-size: 18px;
+    line-height: 1.6;
+}

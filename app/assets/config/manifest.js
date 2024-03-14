@@ -7,3 +7,7 @@
 //= link controllers/hello_controller.js
 //= link controllers/index.js
 //= link blog.css
+//= link index.css
+//= link show.css
+//= link trix.css
+//= link edit.css

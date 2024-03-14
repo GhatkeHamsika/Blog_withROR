@@ -1,4 +1,4 @@
-<%#= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
+<!--<%#= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
 <% if user_signed_in? %>
 <%= link_to "Edit", edit_blog_post_path(@blog_post), class: "btn btn-secondary"%>
  <% end %>
@@ -9,4 +9,21 @@
   <%= image_tag @blog_post.cover_image,  style: "width:300px; height:200px" %>
   <% end %>
 <h1><%= @blog_post.title %></h1>
-<%= @blog_post.content %>
+<%= @blog_post.content %> -->
+
+<% if user_signed_in? %>
+  <%= link_to "Edit", edit_blog_post_path(@blog_post), class: "btn btn-secondary edit-button" %>
+<% end %>
+
+<br>
+<br>
+
+<% if @blog_post.cover_image.present? %>
+  <%= image_tag @blog_post.cover_image, class: "blog-post-cover-image" %>
+<% end %>
+
+<h1 class="blog-post-title"><%= @blog_post.title %></h1>
+
+<div class="blog-post-content">
+  <%= @blog_post.content %>
+</div>
