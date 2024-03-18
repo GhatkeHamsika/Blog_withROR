@@ -17,6 +17,7 @@
     <%= stylesheet_link_tag "show", media: "all" %>
     <%= stylesheet_link_tag "trix", media: "all" %>
     <%= stylesheet_link_tag "edit", media: "all" %>
+    
     <%#= javascript_include_tag "application" %>
     <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= javascript_include_tag 'tinymce_config' %>
@@ -58,9 +59,9 @@
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="site-heading",  style="text-align: center; color:black; ">
-                            <h1>Blog World</h1>
-                            <span class="subheading">A Blog Theme</span>
+                        <div class="site-heading",  style=" ">
+                            <h1>BloG WorlD</h1>
+                            <span class="subheading"><h3>Happy Lifestyle Hacks- The Adventurous Diaries</h3></span>
                         </div>
                     </div>
                 </div>
@@ -79,14 +80,11 @@
       <div class="col-6 col-md-2 mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="<%= root_path %>" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="<%= new_contact_message_path%>" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          <li class="nav-item mb-2"><a href="<%= root_path %>" class="nav-link p-0 text-body-secondary">About</a></li>
         </ul>
       </div>
-
 
       <div class="col-md-5 offset-md-1 mb-3">
         <form>

@@ -1,7 +1,8 @@
 class BlogPostsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     before_action :set_blog_post, except: [:index, :new, :create] # only: [:show, :edit, :update, :destroy]
-    
+    before_action :find_blog_post, only: [:show, :edit, :update, :destroy, :like, :dislike]
+
   def index
     @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
     @pagy, @blog_posts = pagy(@blog_posts)
@@ -47,6 +48,18 @@ class BlogPostsController < ApplicationController
     redirect_to root_path
   end
 
+  def like
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.liked_by current_user
+    redirect_back fallback_location: root_path
+  end
+
+  def dislike
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.disliked_by current_user
+    redirect_back fallback_location: root_path
+  end
+
   private #helper method
   
   def blog_post_params
@@ -70,4 +83,9 @@ class BlogPostsController < ApplicationController
   def authorize_admin!
     redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user.admin?
   end
+
+  def find_blog_post
+    @blog_post = BlogPost.find(params[:id])
+  end
+
 end

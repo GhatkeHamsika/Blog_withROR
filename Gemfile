@@ -83,3 +83,6 @@ gem "jsbundling-rails", "~> 1.3"
 gem 'trix'
 
 gem "pagy", "~> 7.0"
+
+gem 'like_dislike'
+gem 'acts_as_votable'

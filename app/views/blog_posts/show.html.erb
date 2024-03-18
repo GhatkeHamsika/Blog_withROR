@@ -27,3 +27,14 @@
 <div class="blog-post-content">
   <%= @blog_post.content %>
 </div>
+
+<%= button_to "Like", like_blog_post_path(@blog_post), method: :post %>
+<%= button_to "Dislike", dislike_blog_post_path(@blog_post), method: :post %>
+
+
+
+
+<!--<p>Likes: <%= @blog_post.get_likes.size %></p>
+<p>Dislikes: <%= @blog_post.get_dislikes.size %></p>-->
+<p>Likes: <span class="badge bg-success"><%= @blog_post.get_likes.size %></span></p>
+<p>Dislikes: <span class="badge bg-danger"><%= @blog_post.get_dislikes.size %></span></p>

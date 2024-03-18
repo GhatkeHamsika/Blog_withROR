@@ -10,7 +10,10 @@
     /* {
         border: 1px solid rgb(220, 213, 213) !important;
     } */
-    
+    .site-heading{
+      text-align: center; 
+      color:rgb(91, 80, 10);
+    }
     .masthead {
         background-image: url('home-bg.jpg')
         /* Add any additional styles for the header background here */

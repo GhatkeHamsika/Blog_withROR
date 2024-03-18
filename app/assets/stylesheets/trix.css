@@ -343,6 +343,7 @@ trix-editor {
     word-break: break-word; }
     .trix-content * {
       box-sizing: border-box;
+      color: black;
       margin: 0;
       padding: 0; }
     .trix-content h1 {
@@ -350,6 +351,7 @@ trix-editor {
       line-height: 1.2; }
     .trix-content blockquote {
       border: 0 solid #ccc;
+      color: black;
       border-left-width: 0.3em;
       margin-left: 0.3em;
       padding-left: 0.6em; }
